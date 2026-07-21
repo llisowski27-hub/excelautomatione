@@ -3,27 +3,27 @@ import { Reveal } from "@/components/Reveal";
 const ENTRIES = [
   {
     index: "001",
-    term: "Master Data Cleaning",
+    term: "Raport zarządczy buduje się sam",
     definition:
-      "Porządkujemy dane źródłowe — duplikaty, formaty, błędne rekordy. Jedna wersja prawdy.",
+      "Sprzedaż z 20 plików Excel scala się w jeden raport i trafia do zarządu o 7:00. Nikt niczego nie otwiera.",
   },
   {
     index: "002",
-    term: "Data Integration",
+    term: "Faktury bez ręcznego przepisywania",
     definition:
-      "Łączymy systemy, które dziś nie wymieniają między sobą danych. ERP, sprzedaż, magazyn — jeden przepływ.",
+      "Dane z faktur PDF przenoszą się prosto do systemu księgowego. Zero wklepywania, zero literówek.",
   },
   {
     index: "003",
-    term: "Report Automation",
+    term: "Magazyn i sprzedaż w jednym widoku",
     definition:
-      "Raporty generują się i dystrybuują bez udziału zespołu. O stałej porze, w stałym formacie.",
+      "Stany, zamówienia i e-commerce z kilku systemów aktualizują się same w jednym dashboardzie.",
   },
   {
     index: "004",
-    term: "Business Intelligence",
+    term: "Wycena dla klienta w minutę",
     definition:
-      "Kluczowe wskaźniki firmy w czasie rzeczywistym, w jednym widoku. Decyzje na danych, nie na przeczuciu.",
+      "Cenniki dostawców porównują się automatycznie — oferta gotowa od ręki, nie po godzinie liczenia.",
   },
 ];
 
@@ -37,7 +37,7 @@ export function Transformations() {
               Index
             </p>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
-              zakres prac
+              przykładowe wdrożenia
             </p>
           </div>
         </Reveal>

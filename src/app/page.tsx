@@ -4,7 +4,6 @@ import { Hero } from "@/components/landing/Hero";
 import { Transformations } from "@/components/landing/Transformations";
 import { Services } from "@/components/landing/Services";
 import { Team } from "@/components/landing/Team";
-import { Stats } from "@/components/landing/Stats";
 import { CTA } from "@/components/landing/CTA";
 
 export default function HomePage() {
@@ -16,7 +15,6 @@ export default function HomePage() {
         <Transformations />
         <Services />
         <Team />
-        <Stats />
         <CTA />
       </main>
       <Footer />
