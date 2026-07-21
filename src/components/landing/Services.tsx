@@ -6,24 +6,24 @@ import { Reveal } from "@/components/Reveal";
 const SERVICES = [
   {
     number: "01",
-    label: "Dashboardy",
-    headline: "Wiesz co dzieje się w firmie w 10 sekund.",
+    label: "Business Intelligence",
+    headline: "Pełny obraz firmy w czasie rzeczywistym.",
     detail:
-      "Wszystkie dane w jednym miejscu — sprawdzasz wynik dnia, nie szukasz go w plikach.",
+      "Projektujemy dashboardy zarządcze na danych z Waszych systemów — sprzedaż, marża, przepływy. Jeden widok zamiast dwudziestu plików.",
   },
   {
     number: "02",
-    label: "Automatyzacje",
-    headline: "Przestajesz robić nudną robotę.",
+    label: "Process Automation",
+    headline: "Procesy operacyjne działają bez udziału zespołu.",
     detail:
-      "To, co teraz robicie ręcznie każdego dnia, dzieje się samo — bez Waszego udziału.",
+      "Mapujemy powtarzalne procesy i przenosimy je na infrastrukturę, która wykonuje je automatycznie — codziennie, bezbłędnie, bez nadzoru.",
   },
   {
     number: "03",
-    label: "Raporty",
-    headline: "Raport sam trafia na Twoją skrzynkę.",
+    label: "Report Automation",
+    headline: "Dystrybucja raportów o stałej porze, bez nadzoru.",
     detail:
-      "Bez klikania, bez pilnowania terminu. Gotowy, o stałej porze, każdego dnia.",
+      "Raport buduje się z danych źródłowych i trafia do właściwych osób o ustalonej godzinie. Zawsze ten sam standard, zero opóźnień.",
   },
 ];
 

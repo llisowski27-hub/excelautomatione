@@ -1,10 +1,30 @@
 import { Reveal } from "@/components/Reveal";
 
-const ROWS = [
-  { index: "001", before: "20 Exceli", after: "1 dashboard" },
-  { index: "002", before: "5 godzin pracy", after: "30 sekund" },
-  { index: "003", before: "Każdy piątek", after: "40 sekund" },
-  { index: "004", before: "Klikasz codziennie", after: "Od jutra nie" },
+const ENTRIES = [
+  {
+    index: "001",
+    term: "Master Data Cleaning",
+    definition:
+      "Porządkujemy dane źródłowe — duplikaty, formaty, błędne rekordy. Jedna wersja prawdy.",
+  },
+  {
+    index: "002",
+    term: "Data Integration",
+    definition:
+      "Łączymy systemy, które dziś nie wymieniają między sobą danych. ERP, sprzedaż, magazyn — jeden przepływ.",
+  },
+  {
+    index: "003",
+    term: "Report Automation",
+    definition:
+      "Raporty generują się i dystrybuują bez udziału zespołu. O stałej porze, w stałym formacie.",
+  },
+  {
+    index: "004",
+    term: "Business Intelligence",
+    definition:
+      "Kluczowe wskaźniki firmy w czasie rzeczywistym, w jednym widoku. Decyzje na danych, nie na przeczuciu.",
+  },
 ];
 
 export function Transformations() {
@@ -14,24 +34,25 @@ export function Transformations() {
         <Reveal>
           <div className="flex items-baseline justify-between border-b border-line pb-4">
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
-              Zmiana
+              Index
             </p>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
-              przed / po
+              zakres prac
             </p>
           </div>
         </Reveal>
 
         <div>
-          {ROWS.map((row, i) => (
-            <Reveal key={row.index} delay={i * 60}>
-              <div className="group grid grid-cols-[auto_1fr_auto_1fr] items-baseline gap-4 border-b border-line py-7 transition-colors duration-300 hover:bg-white/[0.02] sm:gap-8">
-                <span className="font-mono text-xs text-fg-faint">{row.index}</span>
-                <span className="text-big text-fg-faint">{row.before}</span>
-                <span className="font-mono text-sm text-accent">→</span>
-                <span className="text-big text-right text-fg sm:text-left">
-                  {row.after}
-                </span>
+          {ENTRIES.map((entry, i) => (
+            <Reveal key={entry.index} delay={i * 60}>
+              <div className="group grid grid-cols-[auto_1fr] items-baseline gap-6 border-b border-line py-8 transition-colors duration-300 hover:bg-white/[0.02] sm:grid-cols-[auto_1fr_1fr] sm:gap-10">
+                <span className="font-mono text-xs text-fg-faint">{entry.index}</span>
+                <h3 className="text-big text-fg transition-colors duration-300 group-hover:text-accent">
+                  {entry.term}
+                </h3>
+                <p className="col-start-2 max-w-md text-base leading-relaxed text-fg-muted sm:col-start-3 sm:self-center">
+                  {entry.definition}
+                </p>
               </div>
             </Reveal>
           ))}

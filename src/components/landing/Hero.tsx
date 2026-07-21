@@ -37,21 +37,23 @@ export function Hero() {
 
         <Reveal delay={260}>
           <div>
-            <p className="text-xs font-medium uppercase tracking-[0.2em] text-fg-faint">
-              Zwykły dzień w biurze
+            <p className="font-mono text-xs font-medium uppercase tracking-[0.2em] text-fg-faint">
+              Raportowanie tygodniowe
             </p>
             <p className="text-giant mt-4 text-fg-faint line-through decoration-1">
-              12 kliknięć
+              5 godzin ręcznie
             </p>
-            <span className="my-2 block text-2xl text-accent">↓</span>
-            <p className="text-giant text-fg">1 klik</p>
+            <span className="my-2 block font-mono text-xl text-accent">→</span>
+            <p className="text-giant text-fg">30 sekund</p>
             <Reveal
               delay={500}
               className="rule-draw mt-6 h-px w-full origin-left bg-accent/40"
             >
               <span />
             </Reveal>
-            <p className="mt-4 text-sm text-fg-muted">żeby zobaczyć wynik dnia</p>
+            <p className="mt-4 text-sm text-fg-muted">
+              ten sam raport, po automatyzacji procesu
+            </p>
           </div>
         </Reveal>
       </div>
