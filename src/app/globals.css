@@ -1,0 +1,190 @@
+@import "tailwindcss";
+
+:root {
+  /* Base */
+  --color-paper: #faf9f6;
+  --color-surface: #ffffff;
+  --color-ink: #171512;
+  --color-ink-muted: #6b6558;
+  --color-ink-faint: #9a9484;
+  --color-border: #e8e4dc;
+  --color-border-strong: #d8d2c4;
+
+  /* Accent — terracotta */
+  --color-accent: #e8541e;
+  --color-accent-hover: #c9420f;
+  --color-accent-soft: #fbe4d8;
+  --color-accent-ink: #fff8f5;
+
+  /* Secondary — sage */
+  --color-sage: #5c7a5e;
+  --color-sage-soft: #e3e9e1;
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+}
+
+@theme inline {
+  --color-paper: var(--color-paper);
+  --color-surface: var(--color-surface);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-border: var(--color-border);
+  --color-border-strong: var(--color-border-strong);
+
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-soft: var(--color-accent-soft);
+  --color-accent-ink: var(--color-accent-ink);
+
+  --color-sage: var(--color-sage);
+  --color-sage-soft: var(--color-sage-soft);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: var(--radius-md);
+  --radius-lg: var(--radius-lg);
+  --radius-xl: var(--radius-xl);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-feature-settings: "ss01" on, "cv01" on;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-accent-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+/* ── Fluid display type for hero-scale headlines ────────────── */
+.text-display {
+  font-size: clamp(2.75rem, 2rem + 3.2vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 800;
+}
+
+.text-display-sm {
+  font-size: clamp(2rem, 1.6rem + 1.8vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  font-weight: 800;
+}
+
+/* ── Marquee ─────────────────────────────────────────────────── */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* ── Scroll reveal (JS toggles data-visible) ────────────────── */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+[data-reveal="visible"] {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Accordion (Radix) ───────────────────────────────────────── */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ── Hero data grid: scattered cells settling into order ────── */
+@keyframes cell-settle {
+  0% {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0.35;
+  }
+  45%,
+  70% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--dx), var(--dy)) rotate(var(--rot));
+    opacity: 0.35;
+  }
+}
+
+.data-cell {
+  animation: cell-settle 7s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none;
+  }
+  [data-reveal] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .data-cell {
+    animation: none;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+}
