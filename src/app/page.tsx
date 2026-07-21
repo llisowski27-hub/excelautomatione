@@ -1,15 +1,10 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/landing/Hero";
-import { ServiceTicker } from "@/components/landing/ServiceTicker";
-import { PainSection } from "@/components/landing/PainSection";
-import { Reframe } from "@/components/landing/Reframe";
+import { Transformations } from "@/components/landing/Transformations";
 import { Services } from "@/components/landing/Services";
-import { Process } from "@/components/landing/Process";
-import { Results } from "@/components/landing/Results";
-import { Differentiation } from "@/components/landing/Differentiation";
-import { Audience } from "@/components/landing/Audience";
-import { FAQ } from "@/components/landing/FAQ";
+import { BeforeAfter } from "@/components/landing/BeforeAfter";
+import { Stats } from "@/components/landing/Stats";
 import { CTA } from "@/components/landing/CTA";
 
 export default function HomePage() {
@@ -18,15 +13,10 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <ServiceTicker />
-        <PainSection />
-        <Reframe />
+        <Transformations />
         <Services />
-        <Process />
-        <Results />
-        <Differentiation />
-        <Audience />
-        <FAQ />
+        <BeforeAfter />
+        <Stats />
         <CTA />
       </main>
       <Footer />

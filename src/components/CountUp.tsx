@@ -7,12 +7,14 @@ export function CountUp({
   suffix = "",
   prefix = "",
   duration = 1400,
+  formatted = false,
   className,
 }: {
   to: number;
   suffix?: string;
   prefix?: string;
   duration?: number;
+  formatted?: boolean;
   className?: string;
 }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -46,7 +48,7 @@ export function CountUp({
   return (
     <span ref={ref} className={className}>
       {prefix}
-      {value}
+      {formatted ? value.toLocaleString("pl-PL") : value}
       {suffix}
     </span>
   );

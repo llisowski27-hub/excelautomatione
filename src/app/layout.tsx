@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Oddajemy Wam czas — automatyzacja Excela, dashboardy, raporty",
+  title: "Zabieramy firmom najbardziej znienawidzoną robotę.",
   description:
-    "Automatyzujemy powtarzalne zadania w małych i średnich firmach: dashboardy Power BI, automatyzacje Python + Excel, raporty które same się wysyłają.",
+    "Automatyzujemy wszystko, co codziennie robicie metodą kopiuj → wklej.",
 };
 
 export default function RootLayout({
@@ -28,7 +28,7 @@ export default function RootLayout({
       lang="pl"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-ink font-sans">
+      <body className="min-h-full flex flex-col bg-bg text-fg font-sans">
         {children}
       </body>
     </html>
