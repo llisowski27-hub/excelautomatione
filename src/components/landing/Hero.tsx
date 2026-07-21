@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/Reveal";
-import { CountUp } from "@/components/CountUp";
 
 export function Hero() {
   return (
@@ -39,20 +38,20 @@ export function Hero() {
         <Reveal delay={260}>
           <div>
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-fg-faint">
-              Na żywo
+              Zwykły dzień w biurze
             </p>
-            <div className="text-mega mt-4 tabular-nums text-fg">
-              <CountUp to={1284} formatted duration={1800} />
-            </div>
+            <p className="text-giant mt-4 text-fg-faint line-through decoration-1">
+              12 kliknięć
+            </p>
+            <span className="my-2 block text-2xl text-accent">↓</span>
+            <p className="text-giant text-fg">1 klik</p>
             <Reveal
               delay={500}
               className="rule-draw mt-6 h-px w-full origin-left bg-accent/40"
             >
               <span />
             </Reveal>
-            <p className="mt-4 text-sm text-fg-muted">
-              godzin odzyskanych klientom w tym miesiącu
-            </p>
+            <p className="mt-4 text-sm text-fg-muted">żeby zobaczyć wynik dnia</p>
           </div>
         </Reveal>
       </div>
