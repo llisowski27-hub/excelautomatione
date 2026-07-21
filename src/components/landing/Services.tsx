@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { Plus } from "lucide-react";
 import { Reveal } from "@/components/Reveal";
 
 const SERVICES = [
@@ -28,7 +27,7 @@ const SERVICES = [
   },
 ];
 
-function ServiceTile({ service, delay }: { service: (typeof SERVICES)[number]; delay: number }) {
+function ServiceRow({ service, delay }: { service: (typeof SERVICES)[number]; delay: number }) {
   const [open, setOpen] = useState(false);
 
   return (
@@ -37,31 +36,30 @@ function ServiceTile({ service, delay }: { service: (typeof SERVICES)[number]; d
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="w-full rounded-lg border border-line p-8 text-left transition-colors duration-300 hover:border-line-strong"
+        className="group w-full border-b border-line py-8 text-left transition-colors duration-300 hover:bg-white/[0.02]"
       >
-        <div className="flex items-start justify-between">
+        <div className="grid grid-cols-[auto_1fr_auto] items-baseline gap-6 sm:gap-10">
+          <span className="font-mono text-xs text-fg-faint">{service.number}</span>
           <div>
-            <span className="font-mono text-xs text-fg-faint">{service.number}</span>
-            <p className="mt-2 text-xs font-medium uppercase tracking-[0.2em] text-accent">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
               {service.label}
             </p>
+            <p className="text-big mt-3 text-fg">{service.headline}</p>
+            <div className="expand-rows" data-open={open}>
+              <div>
+                <p className="max-w-md pt-4 text-base leading-relaxed text-fg-muted">
+                  {service.detail}
+                </p>
+              </div>
+            </div>
           </div>
-          <Plus
-            size={18}
-            className={`shrink-0 text-fg-faint transition-transform duration-300 ${
+          <span
+            className={`font-mono text-lg text-fg-faint transition-transform duration-300 ${
               open ? "rotate-45" : ""
             }`}
-          />
-        </div>
-
-        <p className="mt-8 text-xl font-bold leading-snug text-fg">{service.headline}</p>
-
-        <div className="expand-rows" data-open={open}>
-          <div>
-            <p className="mt-4 pt-4 text-sm leading-relaxed text-fg-muted border-t border-line">
-              {service.detail}
-            </p>
-          </div>
+          >
+            +
+          </span>
         </div>
       </button>
     </Reveal>
@@ -73,12 +71,19 @@ export function Services() {
     <section id="uslugi" className="px-6 py-28">
       <div className="mx-auto max-w-6xl">
         <Reveal>
-          <h2 className="text-giant max-w-2xl text-fg">Trzy rzeczy, które robimy.</h2>
+          <div className="flex items-baseline justify-between border-b border-line pb-4">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
+              Co robimy
+            </p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
+              03 / usługi
+            </p>
+          </div>
         </Reveal>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-3">
+        <div>
           {SERVICES.map((service, i) => (
-            <ServiceTile key={service.number} service={service} delay={i * 90} />
+            <ServiceRow key={service.number} service={service} delay={i * 70} />
           ))}
         </div>
       </div>
