@@ -10,7 +10,7 @@ const STATS = [
   { value: 100, suffix: "%", label: "automatycznie" },
 ];
 
-const SLOGANS = ["Widzisz każdy krok.", "Gotowe w dni, nie miesiące.", "Bez znikania na miesiąc."];
+const SLOGANS = ["Widzisz każdy krok.", "Gotowe w dni, nie miesiące.", "Aktywna komunikacja."];
 
 export function Hero() {
   return (
