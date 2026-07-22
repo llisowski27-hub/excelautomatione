@@ -11,8 +11,8 @@ export default function HomePage() {
       <Navbar />
       <main>
         <Hero />
-        <Transformations />
         <Services />
+        <Transformations />
         <CTA />
       </main>
       <Footer />
