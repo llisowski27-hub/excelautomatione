@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const NAV_LINKS = [
   { label: "Usługi", href: "#uslugi" },
-  { label: "Zespół", href: "#zespol" },
+  { label: "Doświadczenie", href: "#zespol" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 

@@ -3,27 +3,27 @@ import { Reveal } from "@/components/Reveal";
 const ENTRIES = [
   {
     index: "001",
-    term: "Raport zarządczy buduje się sam",
+    term: "Raportowanie zarządcze",
     definition:
-      "Sprzedaż z 20 plików Excel scala się w jeden raport i trafia do zarządu o 7:00. Nikt niczego nie otwiera.",
+      "Dane sprzedażowe z kilkudziesięciu plików konsolidują się automatycznie w jeden raport, dostarczany zarządowi codziennie o stałej porze.",
   },
   {
     index: "002",
-    term: "Faktury bez ręcznego przepisywania",
+    term: "Obieg dokumentów i faktur",
     definition:
-      "Dane z faktur PDF przenoszą się prosto do systemu księgowego. Zero wklepywania, zero literówek.",
+      "Dane z faktur i dokumentów trafiają bezpośrednio do systemu księgowego, z automatyczną walidacją poprawności na każdym etapie.",
   },
   {
     index: "003",
     term: "Magazyn i sprzedaż w jednym widoku",
     definition:
-      "Stany, zamówienia i e-commerce z kilku systemów aktualizują się same w jednym dashboardzie.",
+      "Stany, zamówienia i sprzedaż z wielu systemów aktualizują się w jednym, stale aktualnym dashboardzie zarządczym.",
   },
   {
     index: "004",
-    term: "Wycena dla klienta w minutę",
+    term: "Wyceny i oferty",
     definition:
-      "Cenniki dostawców porównują się automatycznie — oferta gotowa od ręki, nie po godzinie liczenia.",
+      "Cenniki dostawców aktualizują się i porównują automatycznie — wycena dla klienta gotowa w kilka minut, z pełną kontrolą marży.",
   },
 ];
 
