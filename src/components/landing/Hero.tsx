@@ -33,7 +33,7 @@ export function Hero() {
         <Reveal delay={220}>
           <div className="mt-10 flex flex-wrap items-center gap-3">
             <Button asChild size="lg" variant="outline">
-              <Link href="#transformacje">Pokaż proces</Link>
+              <Link href="#uslugi">Co robimy</Link>
             </Button>
             <Button asChild size="lg" variant="primary">
               <Link href="#kontakt">Umów rozmowę</Link>
