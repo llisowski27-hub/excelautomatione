@@ -6,31 +6,24 @@ import { Reveal } from "@/components/Reveal";
 const SERVICES = [
   {
     number: "01",
-    label: "Dashboardy zarządcze",
-    headline: "Cała firma w jednym widoku, na żywo.",
+    label: "Business Intelligence",
+    headline: "Pełny obraz firmy w czasie rzeczywistym.",
     detail:
-      "Sprzedaż, marża i przepływy z kilkudziesięciu plików i systemów konsolidują się w jeden dashboard, aktualizowany automatycznie.",
+      "Projektujemy dashboardy zarządcze na danych z Waszych systemów — sprzedaż, marża, przepływy. Jeden widok zamiast dwudziestu plików.",
   },
   {
     number: "02",
-    label: "Automatyzacja procesów",
-    headline: "Powtarzalna robota dzieje się sama.",
+    label: "Process Automation",
+    headline: "Procesy operacyjne działają bez udziału zespołu.",
     detail:
-      "Obieg faktur i dokumentów, przenoszenie danych między systemami, czyszczenie — wykonywane codziennie, bez udziału zespołu.",
+      "Mapujemy powtarzalne procesy i przenosimy je na infrastrukturę, która wykonuje je automatycznie — codziennie, bezbłędnie, bez nadzoru.",
   },
   {
     number: "03",
-    label: "Raportowanie",
-    headline: "Raport gotowy, zanim ktokolwiek o niego zapyta.",
+    label: "Report Automation",
+    headline: "Dystrybucja raportów o stałej porze, bez nadzoru.",
     detail:
-      "Raporty budują się z danych źródłowych i trafiają do właściwych osób o stałej porze. Ten sam standard, zero opóźnień.",
-  },
-  {
-    number: "04",
-    label: "Wyceny i oferty",
-    headline: "Wycena dla klienta w kilka minut.",
-    detail:
-      "Cenniki dostawców aktualizują się i porównują automatycznie — oferta gotowa od ręki, z pełną kontrolą marży.",
+      "Raport buduje się z danych źródłowych i trafia do właściwych osób o ustalonej godzinie. Zawsze ten sam standard, zero opóźnień.",
   },
 ];
 
@@ -43,7 +36,7 @@ function ServiceRow({ service, delay }: { service: (typeof SERVICES)[number]; de
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="group w-full border-b border-line py-7 text-left transition-colors duration-300 hover:bg-white/[0.02]"
+        className="group w-full border-b border-line py-8 text-left transition-colors duration-300 hover:bg-white/[0.02]"
       >
         <div className="grid grid-cols-[auto_1fr_auto] items-baseline gap-6 sm:gap-10">
           <span className="font-mono text-xs text-fg-faint">{service.number}</span>
@@ -51,9 +44,7 @@ function ServiceRow({ service, delay }: { service: (typeof SERVICES)[number]; de
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-accent">
               {service.label}
             </p>
-            <p className="text-big mt-3 text-fg transition-colors duration-300 group-hover:text-accent">
-              {service.headline}
-            </p>
+            <p className="text-big mt-3 text-fg">{service.headline}</p>
             <div className="expand-rows" data-open={open}>
               <div>
                 <p className="max-w-md pt-4 text-base leading-relaxed text-fg-muted">
@@ -85,7 +76,7 @@ export function Services() {
               Co robimy
             </p>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-fg-faint">
-              usługi
+              03 / usługi
             </p>
           </div>
         </Reveal>
